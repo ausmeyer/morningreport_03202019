@@ -132,21 +132,49 @@ On phenyleprine at 0.5 mcg/kg/min
 
 > - TTE: <font size="4"><br>&nbsp;&nbsp;Overall image quality is good. Tachycardic during exam. <br>&nbsp;&nbsp;The LV chamber size is small, partially compressed by the RV. <br>&nbsp;&nbsp;Systolic function is hyperdynamic, EF >70% <br>&nbsp;&nbsp;The right ventricle is severely enlarged (RV : LV ratio is 1.5-2 : 1). <br>&nbsp;&nbsp;There is severe RV dysfunction.  <br>&nbsp;&nbsp;Septal motion is consistent with right ventricular pressure and volume overload. <br>&nbsp;&nbsp;There is free wall hypokinesis. <br>&nbsp;&nbsp;There is mild-to-moderate tricuspid regurgitation <br>&nbsp;&nbsp;There is aortic sclerosis without stenosis. <br>&nbsp;&nbsp;Moderately elevated pulmonary pressures, estimated RVSP 60-65 mmHg. <br>&nbsp;&nbsp;Small pericardial effusion without echocardiographic evidence of tamponade. <br>&nbsp;&nbsp;No evidence of right to left shunt by saline bubble study.</font>
 
-## {.centered}
+##
 
-![](figures/PE_1.png){width=650px}
+```{r out.width = "65%", fig.align="center"}
+library(knitr)    # For knitting document and include_graphics function
+library(ggplot2)  # For plotting
+library(png)      # For grabbing the dimensions of png files
 
-## {.centered}
+img1_path <- "figures/PE_1.png"
+include_graphics(img1_path)
+```
 
-![](figures/PE_2.png){width=625px}
+##
 
-## {.centered}
+```{r out.width = "65%", fig.align="center"}
+library(knitr)    # For knitting document and include_graphics function
+library(ggplot2)  # For plotting
+library(png)      # For grabbing the dimensions of png files
 
-![](figures/PE_3.png){width=550px}
+img1_path <- "figures/PE_2.png"
+include_graphics(img1_path)
+```
 
-## {.centered}
+##
 
-![](figures/PE_4.png){width=20px}
+```{r out.width = "60%", fig.align="center"}
+library(knitr)    # For knitting document and include_graphics function
+library(ggplot2)  # For plotting
+library(png)      # For grabbing the dimensions of png files
+
+img1_path <- "figures/PE_3.png"
+include_graphics(img1_path)
+```
+
+## 
+
+```{r out.width = "55%", fig.align="center"}
+library(knitr)    # For knitting document and include_graphics function
+library(ggplot2)  # For plotting
+library(png)      # For grabbing the dimensions of png files
+
+img1_path <- "figures/PE_4.png"
+include_graphics(img1_path)
+```
 
 ## Massive pulmonary embolism
 
