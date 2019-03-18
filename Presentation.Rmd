@@ -205,7 +205,7 @@ output$probPlot <- renderPlot({
   posttest.odds <- prob / (1 - prob) * lr
   posttest.prob <- posttest.odds / (1 + posttest.odds)
   
-  df <- tibble(x = c('Pretest', 'Posttest'), y = c(prob, posttest.prob))
+  df <- tibble(x = factor(c('Pretest', 'Posttest'), levels = c('Pretest', 'Posttest')), y = c(prob, posttest.prob))
   
   p <- ggplot(df, aes(x = x, y = y)) + geom_bar(stat = 'identity') + 
     labs(x = '', y = '') +
