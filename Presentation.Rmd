@@ -1,5 +1,5 @@
 ---
-title: "Morning Report"
+title: "The Darkened Band"
 author: "Austin Meyer"
 date: "3/20/2019"
 output: ioslides_presentation
@@ -11,7 +11,7 @@ widescreen: true
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Initial Presentation
+# Initial presentation
 
 ##
 
@@ -34,7 +34,7 @@ RR = 26
 Temp = 99.3
 On phenyleprine at 0.5 mcg/kg/min
 
-## Physical Exam
+## Physical exam
 
 - AOx4, No distress, Overweight, Laying in bed
 - Cardiopulmonary exam was wnl
@@ -128,7 +128,7 @@ On phenyleprine at 0.5 mcg/kg/min
 
 # Final diagnosis?
 
-## New Imaging
+## New imaging
 
 > - TTE: <font size="4"><br>&nbsp;&nbsp;Overall image quality is good. Tachycardic during exam. <br>&nbsp;&nbsp;The LV chamber size is small, partially compressed by the RV. <br>&nbsp;&nbsp;Systolic function is hyperdynamic, EF >70% <br>&nbsp;&nbsp;The right ventricle is severely enlarged (RV : LV ratio is 1.5-2 : 1). <br>&nbsp;&nbsp;There is severe RV dysfunction.  <br>&nbsp;&nbsp;Septal motion is consistent with right ventricular pressure and volume overload. <br>&nbsp;&nbsp;There is free wall hypokinesis. <br>&nbsp;&nbsp;There is mild-to-moderate tricuspid regurgitation <br>&nbsp;&nbsp;There is aortic sclerosis without stenosis. <br>&nbsp;&nbsp;Moderately elevated pulmonary pressures, estimated RVSP 60-65 mmHg. <br>&nbsp;&nbsp;Small pericardial effusion without echocardiographic evidence of tamponade. <br>&nbsp;&nbsp;No evidence of right to left shunt by saline bubble study.</font>
 
@@ -180,7 +180,7 @@ include_graphics(img1_path)
 
 
 
-## Probability of Pulmonary Embolism
+## Probability of pulmonary embolism
 
 ```{r wells}
 library(tibble)
@@ -240,7 +240,7 @@ output$probPlot <- renderPlot({
     theme_classic() + 
     ylim(0,1) + 
     ylab('Fractional Probability') +
-    theme(plot.margin = unit(c(0,0,-1,0), "lines"))
+    theme(plot.margin = unit(c(0,0,-0.5,0), "lines"))
   gg2 <- ggplot_gtable(ggplot_build(p))
   gg2$layout$clip[gg2$layout$name == "panel"] <- "off"
   grid.draw(gg2)
