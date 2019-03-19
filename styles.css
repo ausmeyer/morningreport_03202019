@@ -1,0 +1,7 @@
+slides > slide.title-slide {
+  background-image: url("figures/sb.jpg");
+  background-size: 40% 40%;
+  background-position: 30% 25%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}

@@ -3,6 +3,8 @@ title: "The Darkened Band"
 author: "Austin Meyer"
 date: "3/20/2019"
 output: ioslides_presentation
+css: styles.css
+smaller: true
 runtime: shiny
 widescreen: true
 ---
@@ -13,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Initial presentation
 
-##
+## Initial presentation
 
 - <font size="5">59 yo female with a h/o morbid obesity, chronic vertigo, hypertension, and a recent episode of necrotizing fasciitis to the mons pubis. She presented as a transfer from SNF for hypotension.</font>
 
@@ -21,18 +23,19 @@ knitr::opts_chunk$set(echo = FALSE)
 
 > - <font size="4">Routine vitals at SNF and she was found to be hypotensive to 80s systolic. She was seen at MCH where she was found to be hypotensive (lowest 79/46), and was reportedly febrile. Started on phenylephrine. There was concern for UTI based on urinalysis (had indwelling foley, last changed 1 week ago) and was started on Cefepime. Lactate was wnl. There was evidence of AKI on labs and elevated troponin.</font>
 
-> - <font size="4">On arrival, the patient reported some nausea and then had a somewhat bilious emesis. Denied symptoms other than normal vertigo.</font>
+
+> - <font size="5">On arrival, the patient reported some nausea and then had a somewhat bilious emesis. Denied symptoms other than normal vertigo.</font>
 
 # Differential?
 
 ## Vitals on arrival
 
-BP = 107/67
-HR = 106
-SpO2 = 95% on RA
-RR = 26
-Temp = 99.3
-On phenyleprine at 0.5 mcg/kg/min
+BP = 107/67 <br>
+HR = 106 <br>
+SpO2 = 95% on RA <br>
+RR = 26 <br>
+Temp = 99.3 <br>
+Drips = phenyleprine at 0.5 mcg/kg/min
 
 ## Physical exam
 
@@ -74,7 +77,7 @@ On phenyleprine at 0.5 mcg/kg/min
 
 ## Updates and what was done...
 
-> - Became a bit hypotensive so bolus 1L and phenylephrine increased to 1 mcg/kg/min<br><br>
+> - Became a bit hypotensive so bolused 1L and phenylephrine increased to 1 mcg/kg/min<br><br>
   - Started on broad antibiotics including dapto, cefepime, flagyl, acyclovir<br><br>
   - After one dose of cefepime and flagyl, switched to merrem<br><br>
   - After one dose of acyclovir switched to valtrex<br><br>
@@ -82,7 +85,7 @@ On phenyleprine at 0.5 mcg/kg/min
 
 # Day one 
 
-##
+## Day one
 
 - NAE, still on phenylephrine at stable dose
 
@@ -93,8 +96,6 @@ On phenyleprine at 0.5 mcg/kg/min
 > - Exam: AOx4, NAD, Seems completely fine, Eating normally
 
 > - More information: <br>&nbsp;&nbsp;Past cultures grew __Candida glabrata__ at high CFU in urine <br>&nbsp;&nbsp;__Lactobacillus gasseri__ on anaerobic of mons pubis <br>&nbsp;&nbsp;__Candida glabrata__ on fungal of mons pubis wound <br>&nbsp;&nbsp;Various __ESBL bugs__ on standard culture of mons pubis wound
-
-> - Blood cx: NGTD <br>Urine cx: Massive growth
 
 # Refine differential, orders?
 
@@ -110,7 +111,7 @@ On phenyleprine at 0.5 mcg/kg/min
 
 > - Exam: AOx4, NAD, Still completely fine
 
-> - More information: <br>&nbsp;&nbsp;Blood culture still NGTD <br>&nbsp;&nbsp;Started pt on caspofungin due to resistance previously
+> - More information: <br>&nbsp;&nbsp;Blood cx: NGTD <br>&nbsp;&nbsp;Urine cx: Massive growth <br>&nbsp;&nbsp;Started pt on caspofungin for Candida on last admission
 
 # Refine differential, orders?
 
@@ -125,6 +126,8 @@ On phenyleprine at 0.5 mcg/kg/min
 > - Drips: Still requiring 0.07 mcg/kg/min to maintain MAPs > 65
 
 > - Exam: AOx4, NAD, Still completely fine
+
+> - More information: Nothing new on cultures
 
 # Final diagnosis?
 
@@ -176,9 +179,15 @@ img1_path <- "figures/PE_4.png"
 include_graphics(img1_path)
 ```
 
-## Massive pulmonary embolism
+# Final Dx: Massive PE
 
+# Teaching part
 
+## Epidemiology
+
+## Diagnosis
+
+## Treatment
 
 ## Probability of pulmonary embolism
 
