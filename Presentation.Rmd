@@ -227,6 +227,7 @@ fluidPage(
   tags$head(tags$style(".checkbox-inline {margin: 0 !important;}")),
   fluidRow(
     column(6,
+           class = 'multicol',
            wellPanel(checkboxGroupInput("wells", label = tags$b("Wells Criteria"), 
                                         choices = list("Clinical signs or symptoms of DVT" = 3, 
                                                        "PE is #1 diagnosis" = 3, 
