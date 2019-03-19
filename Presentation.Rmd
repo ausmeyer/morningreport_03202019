@@ -78,10 +78,10 @@ Drips = phenyleprine at 0.5 mcg/kg/min
 ## Updates and what was done...
 
 > - Became a bit hypotensive so bolused 1L and phenylephrine increased to 1 mcg/kg/min<br><br>
-  - Started on broad antibiotics including dapto, cefepime, flagyl, acyclovir<br><br>
-  - After one dose of cefepime and flagyl, switched to merrem<br><br>
-  - After one dose of acyclovir switched to valtrex<br><br>
-  - Temp increased to 100.3 overnight
+- Started on broad antibiotics including dapto, cefepime, flagyl, acyclovir<br><br>
+- After one dose of cefepime and flagyl, switched to merrem<br><br>
+- After one dose of acyclovir switched to valtrex<br><br>
+- Temp increased to 100.3 overnight
 
 # Day one 
 
@@ -208,32 +208,34 @@ include_graphics(img1_path)
 ```{r wells}
 library(tibble)
 library(ggplot2)
-#library(grid)
+library(shinyWidgets)
 
 fluidPage(
-  sidebarLayout(position = "right",
-    sidebarPanel(checkboxGroupInput("wells", label = tags$b("Wells Criteria"), 
-                                    choices = list("Clinical signs or symptoms of DVT" = 3, 
-                                                   "PE is #1 diagnosis" = 3, 
-                                                   "Heart rate > 100" = 1.5,
-                                                   "Immobilization >= 3 days or surgery in last 4 weeks" = 1.5, 
-                                                   "Previous objective PE or DVT" = 1.5, 
-                                                   "Hemoptysis" = 1,
-                                                   "Cancer and treatment in last 6 months" = 1
-                                    ),
-                                    selected = 0),
-                 radioButtons("ddimer", label = tags$b("D-dimer > 500 µg/L"), 
-                              choices = list('Yes' = 'positive', 'No' = 'negative', 'Not available' = 'NA'),
-                              selected = 'NA'),
-                 width = 5
+  fluidRow(
+    column(6,
+           wellPanel(checkboxGroupInput("wells", label = tags$b("Wells Criteria"), 
+                                        choices = list("Clinical signs or symptoms of DVT" = 3, 
+                                                       "PE is #1 diagnosis" = 3, 
+                                                       "Heart rate > 100" = 1.5,
+                                                       "Immobilization >= 3 days or surgery in last 4 weeks" = 1.5, 
+                                                       "Previous objective PE or DVT" = 1.5, 
+                                                       "Hemoptysis" = 1,
+                                                       "Cancer and treatment in last 6 months" = 1
+                                        ),
+                                        selected = 0),
+                     radioButtons("ddimer", label = tags$b("D-dimer > 500 µg/L"), 
+                                  choices = list('Yes' = 'positive', 'No' = 'negative', 'Not available' = 'NA'),
+                                  selected = 'NA')
+           )
     ),
     
-    mainPanel(plotOutput('probPlot'), 
-              textOutput('probText'),  
-              width = 6,
-              align = 'center')
+    column(6,
+           plotOutput('probPlot', width="500px",height="400px"), 
+           textOutput('probText'),  
+           align = 'center')
   )
 )
+
 
 output$probText <- renderText({
   points <- sum(as.numeric(input$wells))
