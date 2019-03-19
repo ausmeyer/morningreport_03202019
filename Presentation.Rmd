@@ -224,11 +224,14 @@ fluidPage(
                                     selected = 0),
                  radioButtons("ddimer", label = tags$b("D-dimer > 500 µg/L"), 
                               choices = list('Yes' = 'positive', 'No' = 'negative', 'Not available' = 'NA'),
-                              selected = 'NA')
+                              selected = 'NA'),
+                 width = 6
     ),
     
     mainPanel(plotOutput('probPlot'), 
-              textOutput('probText'),  align = 'center')
+              textOutput('probText'),  
+              width = 6,
+              align = 'center')
   )
 )
 
