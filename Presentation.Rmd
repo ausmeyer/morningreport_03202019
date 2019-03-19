@@ -208,29 +208,30 @@ include_graphics(img1_path)
 ```{r wells}
 library(tibble)
 library(ggplot2)
+library(shinyWidgets)
 
 fluidPage(
-  tags$head(tags$style(".checkbox-inline {margin: 0 !important;}")),
   fluidRow(
-    column(6,
-           wellPanel(checkboxGroupInput("wells", label = tags$b("Wells Criteria"), 
-                                        choices = list("Clinical signs or symptoms of DVT" = 3, 
-                                                       "PE is #1 diagnosis" = 3, 
-                                                       "Heart rate > 100" = 1.5,
-                                                       "Immobilization >= 3 days or surgery in last 4 weeks" = 1.5, 
-                                                       "Previous objective PE or DVT" = 1.5, 
-                                                       "Hemoptysis" = 1,
-                                                       "Cancer and treatment in last 6 months" = 1
-                                        ),
-                                        selected = 0),
-                     radioButtons("ddimer", label = tags$b("D-dimer > 500 µg/L"), 
-                                  choices = list('Yes' = 'positive', 'No' = 'negative', 'Not available' = 'NA'),
-                                  selected = 'NA')
-           )
+    column(5,
+           checkboxGroupButtons("wells", label = h3("Wells Criteria", style = 'line-height: 0'),
+                                direction = 'vertical',
+                                choices = list("Clinical signs or symptoms of DVT" = 3, 
+                                               "PE is #1 diagnosis" = 3, 
+                                               "Heart rate > 100" = 1.5,
+                                               "Immobilization >= 3 days or surgery in last 4 weeks" = 1.5, 
+                                               "Previous objective PE or DVT" = 1.5, 
+                                               "Hemoptysis" = 1,
+                                               "Cancer and treatment in last 6 months" = 1
+                                ),
+                                selected = 0),
+           hr(),
+           radioGroupButtons("ddimer", label = h3("D-dimer > 500 µg/L", style = 'line-height: 0'), 
+                             choices = list('Yes' = 'positive', 'No' = 'negative', 'Not available' = 'NA'),
+                             selected = 'NA')
     ),
     
-    column(6,
-           plotOutput('probPlot', width="500px",height="400px"), 
+    column(7,
+           plotOutput('probPlot', width="500px", height="410px"), 
            textOutput('probText'),  
            align = 'right')
   )
