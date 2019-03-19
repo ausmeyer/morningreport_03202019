@@ -231,7 +231,7 @@ fluidPage(
     column(6,
            plotOutput('probPlot', width="500px",height="400px"), 
            textOutput('probText'),  
-           align = 'center')
+           align = 'right')
   )
 )
 
