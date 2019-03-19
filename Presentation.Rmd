@@ -209,25 +209,10 @@ include_graphics(img1_path)
 library(tibble)
 library(ggplot2)
 
-# tweaks, a list object to set up multicols for checkboxGroupInput
-tweaks <- 
-  list(tags$head(tags$style(HTML("
-                                 .multicol { 
-                                   height: 150px;
-                                   -webkit-column-count: 5; /* Chrome, Safari, Opera */ 
-                                   -moz-column-count: 5;    /* Firefox */ 
-                                   column-count: 5; 
-                                   -moz-column-fill: auto;
-                                   -column-fill: auto;
-                                 } 
-                                 ")) 
-                                 ))
-
 fluidPage(
   tags$head(tags$style(".checkbox-inline {margin: 0 !important;}")),
   fluidRow(
     column(6,
-           class = 'multicol',
            wellPanel(checkboxGroupInput("wells", label = tags$b("Wells Criteria"), 
                                         choices = list("Clinical signs or symptoms of DVT" = 3, 
                                                        "PE is #1 diagnosis" = 3, 
@@ -237,7 +222,8 @@ fluidPage(
                                                        "Hemoptysis" = 1,
                                                        "Cancer and treatment in last 6 months" = 1
                                         ),
-                                        selected = 0),
+                                        selected = 0,
+                                        inline = TRUE),
                      radioButtons("ddimer", label = tags$b("D-dimer > 500 µg/L"), 
                                   choices = list('Yes' = 'positive', 'No' = 'negative', 'Not available' = 'NA'),
                                   selected = 'NA')
