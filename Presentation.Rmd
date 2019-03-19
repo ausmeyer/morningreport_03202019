@@ -208,7 +208,6 @@ include_graphics(img1_path)
 ```{r wells}
 library(tibble)
 library(ggplot2)
-library(shinyWidgets)
 
 fluidPage(
   fluidRow(
