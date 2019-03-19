@@ -191,9 +191,16 @@ include_graphics(img1_path)
 
 # Final Dx: Massive PE
 
-## So... what happened?
+# So... what happened here?
 
-<p style="text-align:center;"><img width=600 src="https://upload.wikimedia.org/wikipedia/commons/6/65/Cognitive_bias_codex_en.svg"/></p>
+##
+
+<p style="text-align:center">
+<object type="image/svg+xml" data="figures/Cognitive_bias_codex_en.svg" height="500px">
+<!-- Your fall back here -->
+<img src="figures/Cognitive_bias_codex_en.svg" height="500px"/>
+</object>
+</p>
 
 # Teaching part
 
