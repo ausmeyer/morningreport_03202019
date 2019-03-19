@@ -85,7 +85,7 @@ Drips = phenyleprine at 0.5 mcg/kg/min
 
 # Day one 
 
-## Day one
+## Day one update
 
 - NAE, still on phenylephrine at stable dose
 
@@ -95,13 +95,17 @@ Drips = phenyleprine at 0.5 mcg/kg/min
 
 > - Exam: AOx4, NAD, Seems completely fine, Eating normally
 
-> - More information: <br>&nbsp;&nbsp;Past cultures grew __Candida glabrata__ at high CFU in urine <br>&nbsp;&nbsp;__Lactobacillus gasseri__ on anaerobic of mons pubis <br>&nbsp;&nbsp;__Candida glabrata__ on fungal of mons pubis wound <br>&nbsp;&nbsp;Various __ESBL bugs__ on standard culture of mons pubis wound
+> - More information from past hospitalization: <br>&nbsp;&nbsp;__Candida glabrata__ at high CFU in urine <br>&nbsp;&nbsp;__Lactobacillus gasseri__ on anaerobic of mons pubis <br>&nbsp;&nbsp;__Candida glabrata__ on fungal of mons pubis wound <br>&nbsp;&nbsp;Various __ESBL bugs__ on standard culture of mons pubis wound
+
+## Day one labs
+
+
 
 # Refine differential, orders?
 
 # Day two
 
-## Day two
+## Day two update
 
 - NAE, levophed weaned to 0.02 mg/kg/min overnight
 
@@ -111,13 +115,17 @@ Drips = phenyleprine at 0.5 mcg/kg/min
 
 > - Exam: AOx4, NAD, Still completely fine
 
-> - More information: <br>&nbsp;&nbsp;Blood cx: NGTD <br>&nbsp;&nbsp;Urine cx: Massive growth <br>&nbsp;&nbsp;Started pt on caspofungin for Candida on last admission
+## Day two labs
+
+> - Blood cx: NGTD <br>Urine cx: Massive growth 
+
+> - Management: Started pt on caspofungin for Candida on last admission
 
 # Refine differential, orders?
 
 # Day three
 
-## Day three
+## Day three updates
 
 - NAE, levophed stable at about 0.1 mg/kg/min, unable to wean
 
@@ -129,7 +137,9 @@ Drips = phenyleprine at 0.5 mcg/kg/min
 
 > - More information: Nothing new on cultures
 
-# Final diagnosis?
+## Day three labs
+
+
 
 ## New imaging
 
@@ -209,7 +219,6 @@ fluidPage(
                                                    "Cancer and treatment in last 6 months" = 1
                                     ),
                                     selected = 0),
-                 hr(),
                  radioButtons("ddimer", label = tags$b("D-dimer > 500 µg/L"), 
                               choices = list('Yes' = 'positive', 'No' = 'negative', 'Not available' = 'NA'),
                               selected = 'NA'),
