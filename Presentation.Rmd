@@ -295,7 +295,7 @@ output$probPlot1 <- renderPlot({
 
 <center><img src="figures/house.gif" width='800px' /></center>
 
-## The gold standard is unclear
+## The gold standard is unclear, actually
 
 > - <font size='4'>Wells 1 (1998): "Pulmonary angiography is the gold standard diagnostic test..."</font>
 > - <font size='4'>Wells 2 (2001): "Patients with nondiagnostic scans and equivocal ultrasonography results had gold- standard testing-pulmonary angiography and venography..."</font>
