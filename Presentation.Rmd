@@ -218,6 +218,7 @@ include_graphics(img1_path)
 
 > - Pretty likely actually
 
+> - Show conditional probabilities
 
 ## Probability of pulmonary embolism w/ CPR
 
@@ -290,11 +291,11 @@ output$probPlot1 <- renderPlot({
 <font size="1">Ceriani E, et al. Clinical prediction rules for pulmonary embolism: a systematic review and meta‐analysis. Journal of thrombosis and haemostasis. 2010, 8:957-70.</font><br>
 <font size="1">Crawford F, et al. D‐dimer test for excluding the diagnosis of pulmonary embolism. Cochrane Database of Systematic Reviews. 2016, 8.</font>
 
-## What is the gold standard?
+## So.. What is the gold standard?
 
 <center><img src="figures/house.gif" width='800px' /></center>
 
-## So... what is the gold standard?
+## The gold standard is unclear
 
 > - <font size='4'>Wells 1 (1998): "Pulmonary angiography is the gold standard diagnostic test..."</font>
 > - <font size='4'>Wells 2 (2001): "Patients with nondiagnostic scans and equivocal ultrasonography results had gold- standard testing-pulmonary angiography and venography..."</font>
