@@ -96,7 +96,7 @@ Drips = phenyleprine at 0.5 mcg/kg/min
 - __Candida glabrata__ on fungal of mons pubis wound<br><br>
 - Various __ESBL bugs__ on standard culture of mons pubis wound
 
-## Day one labs
+## Day one findings
 
 - Na 142, K 4.2, Cl 111, HCO3 19, Cr 1.1
 - Trop peaked at 0.42
@@ -106,6 +106,7 @@ Drips = phenyleprine at 0.5 mcg/kg/min
 - POC flu negative
 - Procal 0.09, CRP 13.3, ESR 11
 - UA off exchanged foley: <br>&nbsp;&nbsp;- Turbid, Large Blood, >20 WBCs, Small LE, Nitrites negative
+- EKG with left axis deviation and RBBB similar to EKG on prior admisison
 
 # Refine differential, orders?
 
@@ -213,15 +214,14 @@ include_graphics(img1_path)
 
 # Teaching part
 
-## Epidemiology
+## How likely is pulmonary embolism?
 
-## Diagnosis
+> - Pretty likely actually
 
-## Treatment
 
-## Probability of pulmonary embolism
+## Probability of pulmonary embolism w/ CPR
 
-```{r wells}
+```{r, echo = FALSE}
 library(tibble)
 library(ggplot2)
 library(shinyWidgets)
@@ -229,7 +229,7 @@ library(shinyWidgets)
 fluidPage(
   fluidRow(
     column(5,
-           checkboxGroupButtons("wells", label = h3("Wells Criteria", style = 'line-height: 0'),
+           checkboxGroupButtons("wells1", label = h3("Wells Criteria", style = 'line-height: 0'),
                                 direction = 'vertical',
                                 choices = list("Clinical signs or symptoms of DVT" = 3, 
                                                "PE is #1 diagnosis" = 3, 
@@ -247,15 +247,15 @@ fluidPage(
     ),
     
     column(7,
-           plotOutput('probPlot', width="500px", height="410px"), 
-           textOutput('probText'),  
+           plotOutput('probPlot1', width="500px", height="410px"), 
+           textOutput('probText1'),  
            align = 'right')
   )
 )
 
 
-output$probText <- renderText({
-  points <- sum(as.numeric(input$wells))
+output$probText1 <- renderText({
+  points <- sum(as.numeric(input$wells1))
   prob <- if(points < 3) 0.06 else if( points < 7 ) 0.23 else 0.49
   
   lr <- if(input$ddimer == 'NA') 1 else if(input$ddimer == 'positive') 0.91 / (1 - 0.6) else if(input$ddimer == 'negative') (1 - 0.91) / 0.6
@@ -266,11 +266,11 @@ output$probText <- renderText({
   paste('Probability of PE = ', posttest.prob, '%', sep = '')
 })
 
-output$probPlot <- renderPlot({
-  points <- sum(as.numeric(input$wells))
+output$probPlot1 <- renderPlot({
+  points <- sum(as.numeric(input$wells1))
   prob <- if(points < 3) 0.06 else if( points < 7 ) 0.23 else 0.49
   
-  lr <- if(input$ddimer == 'NA') 1 else if(input$ddimer == 'positive') 0.90 / (1 - 0.45) else if(input$ddimer == 'negative') (1 - 0.95) / 0.65
+  lr <- if(input$ddimer == 'NA') 1 else if(input$ddimer == 'positive') 0.91 / (1 - 0.6) else if(input$ddimer == 'negative') (1 - 0.91) / 0.6
   
   posttest.odds <- prob / (1 - prob) * lr
   posttest.prob <- posttest.odds / (1 + posttest.odds)
@@ -283,14 +283,100 @@ output$probPlot <- renderPlot({
     ylim(0,1) + 
     ylab('Fractional Probability') +
     theme(plot.margin = unit(c(0,0,-0.5,0), "lines"))
-  #gg2 <- ggplot_gtable(ggplot_build(p))
-  #gg2$layout$clip[gg2$layout$name == "panel"] <- "off"
-  #grid.draw(gg2)
 })
 
 ```
 
-
 <font size="1">Ceriani E, et al. Clinical prediction rules for pulmonary embolism: a systematic review and meta‐analysis. Journal of thrombosis and haemostasis. 2010, 8:957-70.</font><br>
 <font size="1">Crawford F, et al. D‐dimer test for excluding the diagnosis of pulmonary embolism. Cochrane Database of Systematic Reviews. 2016, 8.</font>
 
+## What is the gold standard?
+
+<center><img src="figures/house.gif" width='800px' /></center>
+
+## So... what is the gold standard?
+
+> - <font size='4'>Wells 1 (1998): "Pulmonary angiography is the gold standard diagnostic test..."</font>
+> - <font size='4'>Wells 2 (2001): "Patients with nondiagnostic scans and equivocal ultrasonography results had gold- standard testing-pulmonary angiography and venography..."</font>
+<br><br>
+> - <font size='4'>PIOPED 2 (2006): "Ventilation–perfusion lung scanning showing a high probability of pulmonary embolism in a patient with no history of pulmonary embolism, abnormal findings on pulmonary DSA, or abnormal findings on venous ultrasonography in a patient without previous deep venous thrombosis at that site and nondiagnostic results on ventilation–perfusion scanning (not normal and not high probability without previous pulmonary embolism). Abnormal venous ultrasonography in such a patient was interpreted as a surrogate for the diagnosis of pulmonary embolism."</font>
+
+## Should we rely CT PE?
+
+- <font size='4'>"We intended to study the performance of CTPA in all patients in whom this imaging modality is required to rule out PE. For this reason, our study patients had an overall moderate probability of having PE (28%). It could be reasoned that the NPV of the CTPA is lower in more selected patients with a high clinical probability than in the population that we studied here."</font>
+
+> - <font size='4'>"In our analysis, it was not possible to study this issue in more detail, as none of the included studies had reported the incidence of symptomatic VTE after a normal CTPA result alone in a selection of high‐probability patients only."</font>
+
+> - <font size='4'>"It is of note that in the recent guidelines of the European Society of Cardiology on the diagnosis of acute PE, the safe exclusion of PE in a high clinical probability population by a normal CTPA result alone is being debated because of the possibility of false‐negative CTPA results"</font>
+
+<font size="1">Robert‐Ebadi H, et al. Safety of multidetector computed tomography pulmonary angiography to exclude pulmonary embolism in patients with a likely pretest clinical probability. Journal of Thrombosis and Haemostasis. 2017, 15:1584-90.</font>
+
+## We can address this problem...
+
+```{r, echo = FALSE}
+library(tibble)
+library(ggplot2)
+library(shinyWidgets)
+
+fluidPage(
+  fluidRow(
+    column(5,
+           checkboxGroupButtons("wells2", label = h3("Wells Criteria", style = 'line-height: 0'),
+                                direction = 'vertical',
+                                choices = list("Clinical signs or symptoms of DVT" = 3, 
+                                               "PE is #1 diagnosis" = 3, 
+                                               "Heart rate > 100" = 1.5,
+                                               "Immobilization >= 3 days or surgery in last 4 weeks" = 1.5, 
+                                               "Previous objective PE or DVT" = 1.5, 
+                                               "Hemoptysis" = 1,
+                                               "Cancer and treatment in last 6 months" = 1
+                                ),
+                                selected = 0),
+           hr(),
+           radioGroupButtons("ctpe", label = h3("CT PE positive", style = 'line-height: 0'), 
+                             choices = list('Yes' = 'positive', 'No' = 'negative', 'Not available' = 'NA'),
+                             selected = 'NA')
+    ),
+    
+    column(7,
+           plotOutput('probPlot2', width="500px", height="410px"), 
+           textOutput('probText2'),  
+           align = 'right')
+  )
+)
+
+
+output$probText2 <- renderText({
+  points <- sum(as.numeric(input$wells2))
+  prob <- if(points < 3) 0.06 else if( points < 7 ) 0.23 else 0.49
+  
+  lr <- if(input$ctpe == 'NA') 1 else if(input$ctpe == 'positive') 0.83 / (1 - 0.96) else if(input$ctpe == 'negative') (1 - 0.83) / 0.96
+  
+  posttest.odds <- prob / (1 - prob) * lr
+  posttest.prob <- round(posttest.odds / (1 + posttest.odds) * 100, 2)
+  
+  paste('Probability of PE = ', posttest.prob, '%', sep = '')
+})
+
+output$probPlot2 <- renderPlot({
+  points <- sum(as.numeric(input$wells2))
+  prob <- if(points < 3) 0.06 else if( points < 7 ) 0.23 else 0.49
+  
+  lr <- if(input$ctpe == 'NA') 1 else if(input$ctpe == 'positive') 0.83 / (1 - 0.96) else if(input$ctpe == 'negative') (1 - 0.83) / 0.96
+  
+  posttest.odds <- prob / (1 - prob) * lr
+  posttest.prob <- posttest.odds / (1 + posttest.odds)
+  
+  df <- tibble(x = factor(c('Pretest', 'Posttest'), levels = c('Pretest', 'Posttest')), y = c(prob, posttest.prob))
+  
+  ggplot(df, aes(x = x, y = y)) + geom_bar(stat = 'identity') + 
+    labs(x = '', y = '') +
+    theme_classic() + 
+    ylim(0,1) + 
+    ylab('Fractional Probability') +
+    theme(plot.margin = unit(c(0,0,-0.5,0), "lines"))
+})
+
+```
+
+<font size="1">Stein PD, et al. Multidetector computed tomography for acute pulmonary embolism. New England Journal of Medicine. 2006, 354:2317-27.</font><br>
