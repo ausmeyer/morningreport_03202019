@@ -7,6 +7,7 @@ css: styles.css
 smaller: true
 runtime: shiny
 widescreen: true
+logo: figures/logo.png
 ---
 
 ```{r setup, include=FALSE}
