@@ -17,12 +17,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Initial presentation
 
-- <font size="5">59 yo female with a h/o morbid obesity, chronic vertigo, hypertension, and a recent episode of necrotizing fasciitis to the mons pubis. She presented as a transfer from SNF for hypotension.</font>
+- <font size="5">59 yo female with morbid obesity, chronic vertigo, hypertension, and a recent episode of necrotizing fasciitis to the mons pubis. She presented as a transfer from SNF for hypotension.</font>
 
-> - <font size="4">Since her hospitalization at OSUE she had been in a SNF recovering. She has been having chronic diarrhea and poor po intake which was worse over the past week with frequent NBNB emesis and watery diarrhea.</font>
+> - <font size="4">Since her hospitalization at OSUE she had been in a SNF recovering. She was having chronic diarrhea and poor PO intake which was worse over the past week with frequent NBNB emesis and watery diarrhea.</font>
 
-> - <font size="4">Routine vitals at SNF and she was found to be hypotensive to 80s systolic. She was seen at MCH where she was found to be hypotensive (lowest 79/46), and was reportedly febrile. Started on phenylephrine. There was concern for UTI based on urinalysis (had indwelling foley, last changed 1 week ago) and was started on Cefepime. Lactate was wnl. There was evidence of AKI on labs and elevated troponin.</font>
-
+> - <font size="4">Routine vitals done at SNF. She was hypotensive to 80s systolic. She was seen at MCH where she was still hypotensive (lowest 79/46), and was reportedly febrile. She was bolused 2L NS and started on phenylephrine. There was concern for UTI based on urinalysis (had indwelling foley, last changed 1 week prior) and was started on Cefepime. Labs significant for AKI and troponin.</font>
 
 > - <font size="5">On arrival, the patient reported some nausea and then had a somewhat bilious emesis. Denied symptoms other than normal vertigo.</font>
 
@@ -30,11 +29,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Vitals on arrival
 
-BP = 107/67 <br>
-HR = 106 <br>
-SpO2 = 95% on RA <br>
-RR = 26 <br>
-Temp = 99.3 <br>
+BP = 107/67<br><br>
+HR = 106<br><br>
+SpO2 = 95% on RA<br><br>
+RR = 26<br><br>
+Temp = 99.3<br><br>
 Drips = phenyleprine at 0.5 mcg/kg/min
 
 ## Physical exam
@@ -50,18 +49,13 @@ Drips = phenyleprine at 0.5 mcg/kg/min
 
 # Things to order?
 
-## Labs
+## Initial labs
 
-- Na 141, K 4.6, Cl 110, HCO3 17, Cr 1.2
-- LFTs wnl
-- Trop 0.4
-- WBC 13.4, Hgb 11.3, Plt 341
-- Lactate 1.8
-<br><br>
-- POC flu negative
-- Procal 0.09, CRP 13.3
-- UA off exchanged foley:
-<font size="4"><br>Turbid, Large Blood, >20 WBCs, Small LE, Nitrites negative</font>
+- Na 141, K 4.6, Cl 110, HCO3 17, Cr 1.2<br><br>
+- LFTs wnl<br><br>
+- Trop 0.4<br><br>
+- WBC 9.6, Hgb 11.8, Plt 341<br><br>
+- Lactate 1.4
 
 ## Imaging
 
@@ -78,28 +72,40 @@ Drips = phenyleprine at 0.5 mcg/kg/min
 ## Updates and what was done...
 
 > - Became a bit hypotensive so bolused 1L and phenylephrine increased to 1 mcg/kg/min<br><br>
-- Started on broad antibiotics including dapto, cefepime, flagyl, acyclovir<br><br>
-- After one dose of cefepime and flagyl, switched to merrem<br><br>
-- After one dose of acyclovir switched to valtrex<br><br>
-- Temp increased to 100.3 overnight
+> - Started on broad antibiotics including dapto, cefepime, flagyl, acyclovir<br><br>
+> - After one dose of cefepime and flagyl, switched to merrem<br><br>
+> - After one dose of acyclovir switched to valtrex<br><br>
+> - Temp increased to 100.3 overnight
 
 # Day one 
 
 ## Day one update
 
-- NAE, still on phenylephrine at stable dose
+> - NAE, still on phenylephrine at stable dose<br><br>
 
 > - Phenylephrine quickly weaned off in the morning and pt went hypotensive <br>__Started on levophed__
 
-> - Vitals: HR 101, MAPs consistently around 65, RR 18-24, Temp 100.2, RA 
+> - Vitals: <br>&nbsp;&nbsp;- HR 101 <br>&nbsp;&nbsp;- MAPs consistently around 65 <br>&nbsp;&nbsp;- RR 18-24 <br>&nbsp;&nbsp;- Temp 100.2 <br>&nbsp;&nbsp;- RA 
 
 > - Exam: AOx4, NAD, Seems completely fine, Eating normally
 
-> - More information from past hospitalization: <br>&nbsp;&nbsp;__Candida glabrata__ at high CFU in urine <br>&nbsp;&nbsp;__Lactobacillus gasseri__ on anaerobic of mons pubis <br>&nbsp;&nbsp;__Candida glabrata__ on fungal of mons pubis wound <br>&nbsp;&nbsp;Various __ESBL bugs__ on standard culture of mons pubis wound
+## More information from prior hospitalization
+
+- __Candida glabrata__ at high CFU in urine<br><br>
+- __Lactobacillus gasseri__ on anaerobic of mons pubis wound<br><br>
+- __Candida glabrata__ on fungal of mons pubis wound<br><br>
+- Various __ESBL bugs__ on standard culture of mons pubis wound
 
 ## Day one labs
 
-
+- Na 142, K 4.2, Cl 111, HCO3 19, Cr 1.1
+- Trop peaked at 0.42
+- WBC 13.4 w/ left shift, Hgb 11.3, Plt 390
+- Lactate 1.8 -> 2.0 -> 1.4
+<br><br>
+- POC flu negative
+- Procal 0.09, CRP 13.3, ESR 11
+- UA off exchanged foley: <br>&nbsp;&nbsp;- Turbid, Large Blood, >20 WBCs, Small LE, Nitrites negative
 
 # Refine differential, orders?
 
@@ -109,17 +115,21 @@ Drips = phenyleprine at 0.5 mcg/kg/min
 
 - NAE, levophed weaned to 0.02 mg/kg/min overnight
 
-> - levophed requirement increased back to 0.08 mg/kg/min
+> - Levophed requirement increased back to 0.08 mg/kg/min
 
-> - Vitals: HR 95, MAPs are variable, RR 20-33, Temp 98, SpO2 92% on RA 
+> - Vitals: <br>&nbsp;&nbsp;- HR 95 <br>&nbsp;&nbsp;- MAPs are variable <br>&nbsp;&nbsp;- RR 20-33 <br>&nbsp;&nbsp;- Temp 98 <br>&nbsp;&nbsp;- SpO2 92% on RA 
 
 > - Exam: AOx4, NAD, Still completely fine
 
+> - Management: Started pt on caspofungin for Candida on last admission
+
 ## Day two labs
 
-> - Blood cx: NGTD <br>Urine cx: Massive growth 
-
-> - Management: Started pt on caspofungin for Candida on last admission
+- Na 137, K 4.0, Cl 111, HCO3 18, Cr 0.99<br><br>
+- Trop stopped prior day<br><br>
+- WBC 9, Hgb 9.8, Plt 318<br><br>
+- Lactate stopped prior day<br><br>
+- Blood cx: NGTD
 
 # Refine differential, orders?
 
@@ -127,19 +137,18 @@ Drips = phenyleprine at 0.5 mcg/kg/min
 
 ## Day three updates
 
-- NAE, levophed stable at about 0.1 mg/kg/min, unable to wean
-
-> - Vitals: Unchanged
-
-> - Drips: Still requiring 0.07 mcg/kg/min to maintain MAPs > 65
-
+> - NAE, levophed stable at about 0.1 mg/kg/min, unable to wean<br><br>
+> - Vitals: Unchanged<br><br>
+> - Drips: Still requiring 0.07 mcg/kg/min to maintain MAPs > 65<br><br>
 > - Exam: AOx4, NAD, Still completely fine
-
-> - More information: Nothing new on cultures
 
 ## Day three labs
 
+- Na 138, K 3.7, Cl 111, HCO3 18, Cr 0.84<br><br>
+- WBC 7.6, Hgb 9.4, Plt 297<br><br>
+- Blood cx: NGTD
 
+# Final thoughts?
 
 ## New imaging
 
